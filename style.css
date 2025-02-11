@@ -1,5 +1,17 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-* {
+/* External font import moved to HTML */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -7,10 +19,11 @@
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
 }
-a {
-	text-decoration: none;
+img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
 }
 .container {
 	min-height: 100vh;
@@ -82,7 +95,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+	background-color: rgba(31, 30, 30, 0.24); /* Dark Gray with 24% opacity */
 	transition: .3s ease background-color;
 }
 #header .nav-bar {
@@ -96,7 +109,7 @@ p {
 }
 #header .nav-list ul {
 	list-style: none;
-	position: absolute;
+	position: fixed;
 	background-color: rgb(31, 30, 30);
 	width: 100vw;
 	height: 100vh;
@@ -200,7 +213,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/Hero\ me-2.jpg);
+	background-image: url(./img/Hero\ me-2.webp);
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -291,7 +304,7 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/img-1.png);
+	background-image: url(./img/img-1.webp);
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
@@ -570,11 +583,11 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
-	transition: .3s ease box-shadow;
+	border: 1px solid #0000002c;
+	transition: .3s ease border-color;
 }
 #contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
+	border-color: #000000;
 }
 #contact .icon {
 	width: 70px;
@@ -667,7 +680,7 @@ p {
 }
 /* End Keyframes */
 
-/* Media Query For Tablet */
+/* Media Query For Tablets and Small Screens */
 @media only screen and (min-width: 768px) {
 	.cta {
 		font-size: 2.5rem;
@@ -779,7 +792,7 @@ p {
 	}
 	/* End contact  */
 	}
-/* Media Query For Desktop */
+/* Media Query For Large Desktops and Monitors */
 @media only screen and (min-width: 1200px) {
 	/* header */
 	#header .hamburger {
