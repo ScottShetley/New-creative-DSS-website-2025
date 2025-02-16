@@ -55,7 +55,7 @@ p {
 	text-align: center;
 }
 .section-title span {
-	color: crimson;
+	color: #008000; /* Darker green */
 }
 
 .cta {
@@ -63,7 +63,7 @@ p {
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid crimson;
+	border: 2px solid #008000; /* Darker green */
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: .1rem;
@@ -73,7 +73,7 @@ p {
 }
 .cta:hover {
 	color: white;
-	background-color: crimson;
+	background-color: #006400; /* Even darker green */
 }
 .brand h1 {
 	font-size: 3rem;
@@ -81,7 +81,24 @@ p {
 	color: white;
 }
 .brand h1 span {
-	color: crimson;
+	color: #008000; /* Darker green */
+}
+
+/* Brand Name Styles */
+.brand a {
+  text-decoration: underline; /* Ensure underline is applied */
+  text-decoration-color: #00ffcc; /* Greenish white underline */
+}
+
+.brand h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #00ffcc; /* Greenish white */
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc; /* Subtle glow effect */
+}
+
+.brand h1 span {
+  color: #00ffcc; /* Greenish white */
 }
 
 /* Header section */
@@ -213,66 +230,83 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/Hero\ me-2.webp);
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	z-index: 1;
+  background-image: url('./img/Hero me-2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  height: 100vh; /* Ensure the hero section takes up the full viewport height */
 }
+
 #hero::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: black;
-	opacity: .4;
-	z-index: -1;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: -1;
 }
+
 #hero .hero {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 50px;
-	justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%; /* Ensure the content is vertically centered */
 }
+
 #hero h1 {
-	display: block;
-	width: fit-content;
-	font-size: 4rem;
-	position: relative;
-	color: transparent;
-	animation: text_reveal .5s ease forwards;
-	animation-delay: 1s;
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1s;
+  text-decoration: underline; /* Ensure underline is applied */
+  text-decoration-color: #00ffcc; /* Greenish white underline */
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc; /* Subtle glow effect */
 }
+
 #hero h1:nth-child(1) {
-	animation-delay: 1s;
+  animation-delay: 1s;
 }
+
 #hero h1:nth-child(2) {
-	animation-delay: 2s;
+  animation-delay: 2s;
 }
+
 #hero h1:nth-child(3) {
-	animation: text_reveal_name .5s ease forwards;
-	animation-delay: 3s;
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
 }
+
 #hero h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: crimson;
-	animation: text_reveal_box 1s ease;
-	animation-delay: .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #00ffcc; /* Greenish white */
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.5s;
 }
+
 #hero h1:nth-child(1) span {
-	animation-delay: .5s;
+  animation-delay: 0.5s;
 }
+
 #hero h1:nth-child(2) span {
-	animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
+
 #hero h1:nth-child(3) span {
-	animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 
 /* End Hero Section */
@@ -557,8 +591,7 @@ p {
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid crimson;
-	z-index: -1;
+	border: 7px solid #008000; /* Darker green */
 }
 /* End About Section */
 
@@ -674,7 +707,7 @@ p {
 }
 @keyframes text_reveal_name {
 	100% {
-		color: crimson;
+		color: #008000; /* Darker green */
 		font-weight: 500;
 	}
 }
@@ -747,7 +780,7 @@ p {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid crimson;
+		border: 10px solid #008000; /* Darker green */
 	}
 	#about .col-right {
 		text-align: left;
@@ -822,3 +855,73 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
+
+/* Retro Futurism Styles */
+.retro-futurism {
+  background: #000000; /* Black background */
+  color: #00ff00; /* Bright green text */
+  font-family: 'Orbitron', sans-serif;
+}
+
+.retro-futurism .section-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #00ff00; /* Bright green */
+}
+
+.retro-futurism .cta {
+  background-color: #00ff00; /* Bright green */
+  color: #000000; /* Black text */
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retro-futurism .cta:hover {
+  background-color: #00cc00; /* Darker green */
+}
+
+.retro-futurism .nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.retro-futurism .nav-list ul {
+  display: flex;
+  list-style: none;
+}
+
+.retro-futurism .nav-list ul li {
+  margin: 0 1rem;
+}
+
+.retro-futurism .nav-list ul li a {
+  color: #00ff00; /* Bright green */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.retro-futurism .nav-list ul li a:hover {
+  color: #00cc00; /* Darker green */
+}
+
+/* Underline color change */
+.retro-futurism .nav-list ul li a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #00ff00; /* Bright green */
+  transition: background-color 0.3s ease;
+}
+
+.retro-futurism .nav-list ul li a:hover::after {
+  background-color: #00cc00; /* Darker green */
+}
